@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">  
+  </head>
+  <body>
+    <!--nev-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">DEMO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="./home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./servises.html">servises</a>
+        </li>
+        <li class="nav-item">
+          <button id="showOverlayBtn" class="nav-link">Portfolio </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">contact</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<h1 class="text-center anime1">
+  <span>こ</span>
+  <span>ち</span>
+  <span>ら</span>
+  <span>は</span>
+  <span>サ</span>
+  <span>ー</span>
+  <span>ビ</span>
+  <span>ス</span>
+  <span>ぺ</span>
+  <span>ー</span>
+  <span>ジ</span>
+  <span>で</span>
+  <span>す</span>
+</h1>
+<p class="counter container">0</p>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>サービス</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Web制作</h3>
+          <p>高品質なコーポレートサイトを制作します。</p>
+        </div>
+        <div class="service-item">
+          <h3>SEO対策</h3>
+          <p>検索エンジンで上位表示を目指し、集客をサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <div class="container">
+    <svg width="300" height="100" viewBox="0 0 300 100" fill="none" stroke="#0d6efd" stroke-width="4">
+      <!-- 線や文字パスを描画 -->
+      <path class="logo-path" d="M10 80 Q 150 10, 290 80" />
+    </svg>
+  </div>
+
+  <div class="wrap" aria-label="パートナー企業ロゴの無限スクロール">
+    <!--
+      ポイント：
+      ・lane を2回並べる（全く同じ内容を複製）
+      ・アニメーションはコンテナ（.marquee）にだけ掛ける
+      ・translateX(-50%) でちょうど1レーン分だけ動かす＝継ぎ目が消える
+    -->
+    <div class="marquee">
+      <!-- lane 1 -->
+      <div class="lane">
+        <figure class="item"><img src="" alt="プロジェクトA"></figure>
+        <figure class="item"><img src="" alt="プロジェクトB"></figure>
+        <figure class="item"><img src="" alt="プロジェクトC"></figure>
+        <figure class="item"><img src="" alt="プロジェクトD"></figure>
+        <figure class="item"><img src="" alt="プロジェクトE"></figure>
+        <figure class="item"><img src="" alt="プロジェクトF"></figure>
+        <figure class="item"><img src="" alt="プロジェクトG"></figure>
+        <figure class="item"><img src="" alt="プロジェクトH"></figure>
+      </div>
+      <!-- lane 2（複製） -->
+      <div class="lane" aria-hidden="true">
+        <figure class="item"><img src="" alt="プロジェクトA"></figure>
+        <figure class="item"><img src="" alt="プロジェクトB"></figure>
+        <figure class="item"><img src="" alt="プロジェクトC"></figure>
+        <figure class="item"><img src="" alt="プロジェクトD"></figure>
+        <figure class="item"><img src="" alt="プロジェクトE"></figure>
+        <figure class="item"><img src="" alt="プロジェクトF"></figure>
+        <figure class="item"><img src="" alt="プロジェクトG"></figure>
+        <figure class="item"><img src="" alt="プロジェクトH"></figure>
+      </div>
+    </div>
+    <p class="title">Our Works / Partners</p>
+  </div>
+
+
+
+
+
+
+<div class="overLay">
+  <div class="container">
+    <div class="text">
+       <h2><span>制作実績</span></h2>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quae enim esse at laboriosam possimus.</p>
+    </div>
+  </div>
+  
+</div>
+
+<div class="container">
+ <a href="./contact.html"><button class="btn btn-primary">お問い合わせページ</button></a>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

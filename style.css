@@ -1,0 +1,517 @@
+.text{
+  margin-top: 60px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.content{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  mix-blend-mode: screen;
+}
+.navbar{
+  z-index: 10000;
+}
+.content h1{
+  font-size: 9rem;
+
+}
+.circles{
+  background-color: #badbb4;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: -99;
+  overflow: hidden;
+}
+.circle3{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  top: -200px;
+  left: -200px;
+}
+.circle2{
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background-color: #4dff4f;
+  border-radius: 50%;
+  top: -400px;
+  left: -400px;
+}
+.circle1{
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  background-color: #ee2d2d;
+  border-radius: 50%;
+  top: -600px;
+  left: -600px;
+}
+
+
+.services, .about, .contact {
+  padding: 2rem 0;
+}
+
+.service-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.service-item {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1;
+}
+.text h2{
+  width: 100%;
+  position: relative;
+  position: relative;
+}
+.text h2 span{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transform: translateX(100%);
+  transition: all .5s ease;
+}
+.text h2 span.active2{
+  transform: translateX(0%);
+}
+
+.card1{
+  position: relative;
+}
+.card1::after{
+  content: "";
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d6efd;
+  position: absolute;
+  transition: all .5s ease;
+  opacity: 0;
+  z-index: -1;
+}
+.container .card1:hover::after {
+  opacity: 1;
+}
+
+
+
+ .text p {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 20px;
+ }
+
+.text h2::after{
+   content: "";
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 0;
+   height: 1px;
+   background-color: #fff;
+   transition: all 3s ease;
+ }
+.text h2.active::after{
+  width: 100%;
+}
+
+
+
+ .text p::before{
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 5px;
+  height: 0%;
+  top: 0;
+  left: -20px;
+  transition: all 3s ease;
+}
+
+.text p.active1::before{
+  height: 100%;
+}
+
+.overLay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  position: absolute; /* absoluteからfixedに変更 */
+  top: 60px;          /* 画面全体に表示 */
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease; /* アニメーション追加 */
+  z-index: 9999;   /* 必ず前面に */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.overLay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* 真ん中スタート */
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); /* 真ん中基準 */
+}
+
+.nav-link.active3::after {
+  width: 100%; /* 両端まで広げる */
+}
+
+.nav-item .active{
+  position: relative;
+}
+
+.nav-item .active::after{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+.anime1{
+  opacity: 0;
+}
+.container {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ローディング */
+
+
+/* 初期状態（メイン非表示） */
+.main-content {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ① フェードイン */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ② スクロールでフェードイン */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ③ 1文字ずつ */
+.catch span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* SVG */
+svg {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+/* 数字 */
+.counter {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+/* パララックス */
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 150%;
+  background: url('https://picsum.photos/1600/900?blur=3') no-repeat center/cover;
+  z-index: -1;
+}
+
+.parallax-section h2 {
+  position: relative;
+  z-index: 1;
+  margin-top: 40vh;
+  color: white;
+  font-size: 3rem;
+}
+
+h1{
+  opacity: 0;
+}
+
+h1 span{
+  display: inline-block;
+}
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader .dot{
+  width: 50px;
+  height: 50px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+dt {
+  font-weight: bold;
+}
+
+table {
+  border: inherit;
+  /* 1 */
+  border-collapse: collapse;
+}
+
+td,
+th {
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* =============================================
+フォームのCSSはここから
+============================================= */
+
+
+/* フォーム04 */
+.form04 {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #43a3b7;
+  padding: 3rem 2rem;
+}
+
+.form-inner {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+}
+
+.form-label {
+  color: #fff;
+  font-weight: bold;
+  width: 30%;
+  height: 100%;
+}
+
+.form-label label {
+  vertical-align: middle;
+}
+
+.form-input {
+  color: #fff;
+  width: 70%;
+}
+
+.required {
+  display: inline-block;
+  background: #fff;
+  color: #43a3b7;
+  font-size: 0.75rem;
+  padding: 0.2rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+input,
+textarea,
+select {
+  background-color: transparent;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #fff;
+  padding: 1rem;
+}
+
+select {
+  width: 180px;
+  height: 40px;
+  border: 2px solid #fff;
+  padding: 0 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #fff;
+  padding: 1rem;
+}
+
+.form-btn {
+  display: block;
+  width: 180px;
+  background: #fff;
+  color: #43a3b7;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.9rem 0;
+  margin: 1.5rem auto 0;
+}
+
+@media (max-width: 768px) {
+  .form-inner {
+    display: block;
+  }
+
+  .form-label {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+}
+
+
+    .wrap {
+      max-width: 100%;
+      overflow: hidden;            /* はみ出しを隠す */
+      padding: 24px 0;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .marquee {
+      display: flex;
+      align-items: center;
+      gap: 24px;                   /* 画像の間隔 */
+      width: max-content;          /* 中身サイズに合わせる */
+      animation: scroll 60s linear infinite;
+      will-change: transform;
+    }
+
+    /* ホバーで一時停止 */
+    .wrap:hover .marquee {
+      animation-play-state: paused;
+    }
+
+    /* 2レーン（複製）で継ぎ目をなくす */
+    .lane {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .item {
+      flex: 0 0 auto;
+      width: clamp(120px, 16vw, 220px);   /* レスポンシブな横幅 */
+      aspect-ratio: 4 / 3;                /* 比率を統一 */
+      border-radius: 16px;
+      overflow: hidden;
+      background: #1b1d24;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); } /* 全体幅の半分だけ左へ（=片方のレーン分） */
+    }
+
+
+
+    /* タイトル装飾（任意） */
+    .title {
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-align: center;
+      margin: 12px 0 0;
+      opacity: .8;
+      font-size: clamp(14px, 2.8vw, 16px);
+    }
